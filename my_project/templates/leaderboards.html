@@ -1,0 +1,282 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Leaderboards
+{% endblock %}
+
+{% block body %}
+<div id = "titles">
+    Leaderboards
+  </div>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Rank</th>
+      <th scope="col">Player</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+<tbody>
+   <!--jinja is weird, found you had to use an array and this 'hack' to count; would have just preferred to do it in python-->
+   {% set x = ['1'] %}
+   {% for every in list %}
+<tr>
+  <th scope="row">{{x| length}}</th>
+  {% if every["name"] == player %}
+  <td style = "color:#ffff40;">{{every ["name"]}}</td>
+  <td style = "color:#ffff40;">{{every ["high_score"]}}</td>
+  {% else %}
+  <td>{{every ["name"]}}</td>
+  <td>{{every ["high_score"]}}</td>
+  {% endif %}
+  {% if x.append('1') %}{% endif %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<div class ="bgtext">
+  ïImÑgvÌIta.
+  . ` ïI prmaTmne nm>.
+  . Aw ïImÑgvÌIta.
+  Aw àwmae=Xyay>
+   x&traò+ %vac,
+  xmR]eÇe k…é]eÇe smveta yuyuTsv>,
+  mamka> pa{fvaíEv ikmk…vRt sÃy. 1-1.
+   sÃy %vac,
+  †:qœva tu pa{fvanIk< VyUF< ÊyaeRxnStda,
+  AacayRmups¼My raja vcnmävIt!. 1-2.
+  ïImÑgvÌIta 3
+  pZyEta< pa{fupuÇa[amacayR mhtI— cmUm!,
+  VyUFa< Ô‚pdpuÇe[ tv iz:ye[ xImta. 1-3.
+  AÇ zUra mhe:vasa ÉImajuRnsma yuix,
+  yuyuxanae ivraqí Ô‚pdí mharw>. 1-4.
+  x&òketuíeiktan> kaizrají vIyRvan!,
+  puéijTk…iNtÉaejí zEByí nrpu¼v>. 1-5.
+  yuxamNyuí iv³aNt %ÄmaEjaí vIyRvan!,
+  saEÉÔae ÔaEpdeyaí svR @v mharwa>. 1-6.
+  ASmak< tu ivizòa ye taiÚbaex iÖjaeÄm,
+  nayka mm sENySy s<}aw¡ taNävIim te. 1-7.
+  ÉvaNÉI:mí k[Rí k«pí simitÃy>,
+  AñTwama ivk[Rí saEmdiÄStwEv c. 1-8.
+  ANye c bhv> zUra mdweR Ty´jIivta>,
+  nanazôàhr[a> sveR yuÏivzarda>. 1-9.
+  ApyaRÝ< tdSmak< bl< ÉI:maiÉri]tm!,
+  pyaRÝ< iTvdmete;a< bl< ÉImaiÉri]tm!. 1-10.
+  ïImÑgvÌIta 4
+  Ayne;u c sveR;u ywaÉagmviSwta>,
+  ÉI:mmevaiÉr]Ntu ÉvNt> svR @v ih. 1-11.
+  tSy sÃnyNh;¡ k…év&Ï> iptamh>,
+  is<hnad< ivn*ae½E> zŒ< dXmaE àtapvan!. 1-12.
+  tt> zŒaí ÉeyRí p[vankgaemuoa>,
+  shsEva_yhNyNt s zBdStumulae=Évt!. 1-13.
+  tt> ñetEhRyEyuR´e mhit SyNdne iSwtaE,
+  maxv> pa{fvíEv idVyaE zŒaE àdXmtu>. 1-14.
+  paÂjNy< ù;Ikezae devdÄ< xnÃy>,
+  paE{f+< dXmaE mhazŒ< ÉImkmaR v&kaedr>. 1-15.
+  AnNtivjy< raja k…NtIpuÇae yuixiór>,
+  nk…l> shdeví su"ae;mi[pu:pkaE. 1-16.
+  kaZyí prme:vas> izo{fI c mharw>,
+  x&ò*uçae ivraqí saTyikíapraijt>. 1-17.
+  Ô‚pdae ÔaEpdeyaí svRz> p&iwvIpte,
+  saEÉÔí mhaba÷> zŒaNdXmu> p&wKp&wkœ. 1-18.
+  ïImÑgvÌIta 5
+  s "ae;ae xatRraò+a[a< ùdyain Vydaryt!,
+  nÉí p&iwvI— cEv tumulae=_ynunadyn!. 1-19. or lae Vynu
+  Aw VyviSwtaN†:qœva xatRraò+an! kipXvj>,
+  àv&Äe zôsMpate xnué*My pa{fv>. 1-20.
+  ù;Ikez< tda vaKyimdmah mhIpte,
+   AjuRn %vac,
+  senyaeéÉyaemRXye rw< Swapy me=Cyut. 1-21.
+  yavdetaiÚrI]e=h< yaeÏ‚kamanviSwtan!,
+  kEmRya sh yaeÏVymiSmn! r[smu*me. 1-22.
+  yaeTSymananve]e=h< y @te=Ç smagta>,
+  xatRraò+Sy ÊbuRÏeyuRÏe iàyickI;Rv>. 1-23.
+   sÃy %vac,
+  @vmu´ae ù;Ikezae gufakezen Éart,
+  senyaeéÉyaemRXye SwapiyTva rwaeÄmm!. 1-24.
+  ÉI:mÔae[àmuot> sveR;a< c mhIi]tam!,
+  %vac pawR pZyEtaNsmvetaNk…êinit. 1-25.
+  ïImÑgvÌIta 6
+  tÇapZyiTSwtaNpawR> ipt¨nw iptamhan!,
+  AacayaRNmatulaNæat¨NpuÇaNpaEÇaNsoI—Stwa. 1-26.
+  ñzuraNsuùdíEv senyaeéÉyaerip,
+  taNsmIúy s kaENtey> svaRNbNxUnviSwtan!. 1-27.
+  k«pya pryaivòae iv;IdiÚdmävIt!,
+   AjuRn %vac,
+  †:qœvem< Svjn< k«:[ yuyuTsu< smupiSwtm!. 1-28.
+  sIdiNt mm gaÇai[ muo< c pirzu:yit,
+  vepwuí zrIre me raemh;Rí jayte. 1-29.
+  ga{fIv< ö<ste hStaÅv‹Ev pirdýte,
+  n c z²aeMyvSwatu< æmtIv c me mn>. 1-30.
+  inimÄain c pZyaim ivprItain kezv,
+  n c ïeyae=nupZyaim hTva Svjnmahve. 1-31.
+  n ka'œ]e ivjy< k«:[ n c raJy< suoain c,
+  ik< nae raJyen gaeivNd ik< ÉaegEjIRivten va. 1-32.
+  ïImÑgvÌIta 7
+  ye;amweR kai'œ]t< nae raJy< Éaega> suoain c,
+  t #me=viSwta yuÏe àa[a<STy®va xnain c. 1-33.
+  AacayaR> iptr> puÇaStwEv c iptamha>,
+  matula> ñzura> paEÇa> Zyala> sMbiNxnStwa. 1-34.
+  @taÚ hNtuimCDaim ¹tae=ip mxusUdn,
+  Aip ÇElaeKyraJySy hetae> ik< nu mhIk«te. 1-35.
+  inhTy xatRraò+aÚ> ka àIit> Sya¾nadRn,
+  papmevaïyedSmaNhTvEtanattaiyn>. 1-36.
+  tSmaÚahaR vy< hNtu< xatRraò+aNSvbaNxvan!,
+  Svjn< ih kw< hTva suion> Syam maxv. 1-37.
+  y*Pyete n pZyiNt laeÉaephtcets>,
+  k…l]yk«t< dae;< imÇÔaehe c patkm!. 1-38.
+  kw< n }eymSmaiÉ> papadSmaiÚvitRtum!,
+  k…l]yk«t< dae;< àpZyiÑjRnadRn. 1-39.
+  k…l]ye à[ZyiNt k…lxmaR> snatna>,
+  xmeR nòe k…l< k«TõmxmaeR=iÉÉvTyut. 1-40.
+  ïImÑgvÌIta 8
+  AxmaRiÉÉvaTk«:[ àÊ:yiNt k…liôy>,
+  ôI;u Êòasu va:[eRy jayte v[Rs»r>. 1-41.
+  s»rae nrkayEv k…l¹ana< k…lSy c,
+  ptiNt iptrae ýe;a< luÝip{faedki³ya>. 1-42.
+  dae;EretE> k…l¹ana< v[Rs»rkarkE>,
+  %Tsa*Nte jaitxmaR> k…lxmaRí zañta>. 1-43.
+  %TsÚk…lxmaR[a< mnu:ya[a< jnadRn,
+  nrke inyt< vasae ÉvtITynuzuïum. 1-44. or nrke=inyt<
+  Ahae bt mhTpap< ktu¡ Vyvista vym!,
+  yÔaJysuolaeÉen hNtu< Svjnmu*ta>. 1-45.
+  yid mamàtIkarmzô< zôpa[y>,
+  xatRraò+a r[e hNyuStNme ]emtr< Évet!. 1-46.
+   sÃy %vac,
+  @vmu®vajuRn> s'œOye rwaepSw %paivzt!,
+  ivs&Jy szr< cap< zaeks<iv¶mans>. 1-47.
+  ïImÑgvÌIta 9
+  ` tTsidit ïImÑgvÌItasUpin;Tsu
+  äüiv*aya< yaegzaôe ïIk«:[ajuRns<vade
+  AjuRniv;adyaegae nam àwmae=Xyay>. 1.
+  Aw iÖtIyae=Xyay>
+sÃy %vac,
+t< twa k«pyaivòmïupU[aRk…le][m!,
+iv;IdNtimd< vaKymuvac mxusUdn>. 2-1.
+ïIÉgvanuvac,
+k…tSTva kZmlimd< iv;me smupiSwtm!,
+AnayRjuòmSvGyRmkIitRkrmjuRn. 2-2.
+¬EBy< ma Sm gm> pawR nEtÅvYyupp*te,
+]uÔ< ùdydaEbRLy< Ty®vaeiÄó prNtp. 2-3.
+AjuRn %vac,
+kw< ÉI:mmh< s'œOye Ôae[< c mxusUdn,
+#;uiÉ> àityaeTSyaim pUjahaRvirsUdn. 2-4.
+guênhTva ih mhanuÉavan!
+ïeyae Éae´…< ÉEúympIh laeke,
+ïImÑgvÌIta 11
+hTvawRkama<Stu guêinhEv
+ÉuÃIy Éaegan! éixràidGxan!. 2-5.
+n cEtiÖÒ> ktrÚae grIyae
+yÖa jyem yid va nae jyeyu>,
+yanev hTva n ijjIiv;ams!-
+te=viSwta> àmuoe xatRraò+a>. 2-6.
+kapR{ydae;aephtSvÉav>
+p&CDaim Tva< xmRsMmUFceta>,
+yCÀey> SyaiÚiít< äUih tNme
+iz:ySte=h< zaix ma< Tva< àpÚm!. 2-7.
+n ih àpZyaim mmapnu*adœ
+yCDaekmuCDae;[imiNÔya[am!,
+AvaPy ÉUmavspÆm&Ï<
+raJy< sura[amip caixpTym!. 2-8.
+sÃy %vac,
+@vmu®va ù;Ikez< gufakez> prNtp,
+n yaeTSy #it gaeivNdmu®va tU:[I— bÉUv h. 2-9.
+ïImÑgvÌIta 12
+tmuvac ù;Ikez> àhsiÚv Éart,
+senyaeéÉyaemRXye iv;IdNtimd< vc>. 2-10.
+ïIÉgvanuvac,
+AzaeCyanNvzaecSTv< à}avada<í Éa;se,
+gtasUngtasU<í nanuzaeciNt pi{fta>. 2-11.
+n Tvevah< jatu nas< n Tv< neme jnaixpa>,
+n cEv n Éiv:yam> sveR vymt> prm!. 2-12.
+deihnae=iSmNywa dehe kaEmar< yaEvn< jra,
+twa dehaNtràaiÝxIRrStÇ n muýit. 2-13.
+maÇaSpzaRStu kaENtey zItae:[suoÊ>oda>,
+Aagmapaiynae=inTyaSta<iStit]Sv Éart. 2-14.
+y< ih n VywyNTyete pué;< pué;;RÉ,
+smÊ>osuo< xIr< sae=m&tTvay kLpte. 2-15.
+nastae iv*te Éavae naÉavae iv*te st>,
+%Éyaerip †òae=NtSTvnyaeStÅvdizRiÉ>. 2-16.
+ïImÑgvÌIta 13
+Aivnaiz tu tiÖiÏ yen svRimd< ttm!,
+ivnazmVyySyaSy n kiíTktuRmhRit. 2-17.
+ANtvNt #me deha inTySyae´a> zrIir[>,
+Anaiznae=àmeySy tSma*uXySv Éart. 2-18.
+y @n< veiÄ hNtar< yíEn< mNyte htm!,
+%ÉaE taE n ivjanItae nay< hiNt n hNyte. 2-19.
+n jayte ièyte va kdaicn!
+nay< ÉUTva Éivta va n ÉUy>,
+Ajae inTy> zañtae=y< pura[ae
+n hNyte hNymane zrIre. 2-20.
+vedaivnaizn< inTy< y @nmjmVyym!,
+kw< s pué;> pawR k< "atyit hiNt km!. 2-21.
+vasa<is jI[aRin ywa ivhay
+nvain g&Ÿait nrae=prai[,
+twa zrIrai[ ivhay jI[aR-
+NyNyain s<yait nvain dehI. 2-22.
+ïImÑgvÌIta 14
+nEn< iDNdiNt zôai[ nEn< dhit pavk>,
+n cEn< ¬edyNTyapae n zae;yit maét>. 2-23.
+ACDe*ae=ymdaýae=ym¬e*ae=zae:y @v c,
+inTy> svRgt> Swa[urclae=y< snatn>. 2-24.
+AVy´ae=ymicNTyae=ymivkayaeR=ymuCyte,
+tSmadev< ividTvEn< nanuzaeictumhRis. 2-25.
+Aw cEn< inTyjat< inTy< va mNyse m&tm!,
+twaip Tv< mhabahae nEv< zaeictumhRis. 2-26.
+jatSy ih Øuvae m&TyuØuRv< jNm m&tSy c,
+tSmadpirhayeR=weR n Tv< zaeictumhRis. 2-27.
+AVy´adIin ÉUtain Vy´mXyain Éart,
+AVy´inxnaNyev tÇ ka pirdevna. 2-28.
+AaíyRvTpZyit kiíden-
+maíyRvÖdit twEv caNy>,
+AaíyRv½EnmNy> z&[aeit
+ïuTvaPyen< ved n cEv kiít!. 2-29.
+ïImÑgvÌIta 15
+dehI inTymvXyae=y< dehe svRSy Éart,
+tSmaTsvaRi[ ÉUtain n Tv< zaeictumhRis. 2-30.
+SvxmRmip caveúy n ivkiMptumhRis,
+xMyaRiÏ yuÏaCÀeyae=NyT]iÇySy n iv*te. 2-31.
+y†CDya caeppÚ< SvgRÖarmpav&tm!,
+suion> ]iÇya> pawR lÉNte yuÏmI†zm!. 2-32.
+Aw ceÅvimm< xMy¡ s'œ¢am< n kir:yis,
+tt> Svxm¡ kIit¡ c ihTva papmvaPSyis. 2-33.
+AkIit¡ caip ÉUtain kwiy:yiNt te=Vyyam!,
+sMÉaivtSy cakIitRmRr[aditirCyte. 2-34.
+ÉyaÔ[aÊprt< m<SyNte Tva< mharwa>,
+ye;a< c Tv< b÷mtae ÉUTva yaSyis la"vm!. 2-35.
+AvaCyvada<í bøNvid:yiNt tvaihta>,
+inNdNtStv samWy¡ ttae Ê>otr< nu ikm!. 2-36.
+htae va àaPSyis Svg¡ ijTva va Éaeúyse mhIm!,
+tSmaÊiÄó kaENtey yuÏay k«tiníy>. 2-37.
+ïImÑgvÌIta 16
+suoÊ>oe sme k«Tva laÉalaÉaE jyajyaE,
+ttae yuÏay yuJySv nEv< papmvaPSyis. 2-38.
+@;a te=iÉihta sa'œOye buiÏyaeRge iTvma< z&[u,
+buÏ(a yu´ae yya pawR kmRbNx< àhaSyis. 2-39.
+nehaiÉ³mnazae=iSt àTyvayae n iv*te,
+SvLpmPySy xmRSy Çayte mhtae Éyat!. 2-40.
+VyvsayaiTmka buiÏrekeh k…énNdn,
+b÷zaoa ýnNtaí buÏyae=Vyvsaiynam!. 2-41.
+yaimma< pui:pta< vac< àvdNTyivpiít>,
+vedvadrta> pawR naNydStIit vaidn>. 2-42.
+kamaTman> SvgRpra jNmkmR)làdam!,
+i³yaivze;b÷la< ÉaegEñyRgit< àit. 2-43.
+ÉaegEñyRàs´ana< tyapùtcetsam!,
+VyvsayaiTmka buiÏ> smaxaE n ivxIyte. 2-44.
+ÇEgu{yiv;ya veda inôEgu{yae ÉvajuRn,
+inÖRNÖae inTysÅvSwae inyaeRg]em AaTmvan!. 2-45.
+ïImÑgvÌIta 17
+yavanwR %dpane svRt> sMPlutaedke,
+tavaNsveR;u vede;u äaü[Sy ivjant>. 2-46.
+kmR{yevaixkarSte ma )le;u kdacn,
+ma kmR)lhetuÉURmaR te s¼ae=STvkmRi[. 2-47.
+yaegSw> k…é kmaRi[ s¼< Ty®va xnÃy,
+isÏ(isÏ(ae> smae ÉUTva smTv< yaeg %Cyte. 2-48.
+Ëre[ ývr< kmR buiÏyaegaÏnÃy,
+buÏaE zr[miNvCD k«p[a> )lhetv>. 2-49.
+buiÏyu´ae jhatIh %Ée suk«tÊ:k«te,
+tSma*aegay yuJySv yaeg> kmRsu kaEzlm!. 2-50.
+  </div>
+{% endblock %}
+
