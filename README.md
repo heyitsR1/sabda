@@ -110,7 +110,7 @@ This project helped me understand how things were sent and how confirmations hap
 
 ## License
 
-This project was completed as a final project for [CS50P](https://cs50.harvard.edu/python/).  
+This project was completed as a final project for [CS50X](https://cs50.harvard.edu/x/2025/).  
 License terms follow the guidelines of CS50 projects. No commercial use is intended.
 
 ---
